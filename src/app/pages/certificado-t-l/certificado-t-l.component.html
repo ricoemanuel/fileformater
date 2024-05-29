@@ -1,0 +1,106 @@
+<div class="title">
+    <h2>Certificado de Tradición y Libertad</h2>
+</div>
+<div class="centrar">
+    <div class="head">
+        <h3>Conoce que es un Certificado de Tradición y Libertad</h3>
+        <div class="head__content">
+            <p>
+                Su función principal, como su nombre lo indica, es certificar la tradición histórica de un inmueble
+                registrado y la libertad jurídica del mismo.
+                Antes de comprar, vender o realizar cualquier operación relacionada con un inmueble, es recomendable
+                solicitar y revisar este certificado para asegurarse de la validez y la situación legal del mismo.
+            </p>
+        </div>
+        <div class="controller">
+            <mat-card-actions>
+                <button [ngClass]="{'selected': activeTab === 'Elementos'}" (click)="tab('Elementos')" mat-button>Elementos informativos</button>
+                <button [ngClass]="{'selected': activeTab === 'tramites'}" (click)="tab('tramites')" mat-button>Trámites en los que se requiere el certificado</button>
+            </mat-card-actions>
+
+        </div>
+    </div>
+</div>
+
+<div class="content" *ngIf="activeTab=='Elementos'">
+    <div class="table">
+        <table>
+            <tr>
+                <th>Identificación del bien inmueble</th>
+                <td>Incluyen datos como la dirección, la matrícula inmobiliaria y la descripción del inmueble.</td>
+            </tr>
+            <tr>
+                <th>Titularidad</th>
+                <td>Quién es el actual propietario del bien inmueble y cómo se adquirió la propiedad, ya sea por
+                    compraventa, herencia, donación u otro medio. 
+                </td>
+            </tr>
+            <tr>
+                <th>Historia registral</th>
+                <td>Detalla los actos o contratos que han sido registrados sobre el inmueble a lo largo del tiempo, como
+                    compraventas, hipotecas, servidumbres, entre otros. 
+                </td>
+            </tr>
+            <tr>
+                <th>Limitaciones y gravámenes</th>
+                <td>Como hipotecas, embargos, restricciones urbanísticas u otros derechos que puedan afectar la propiedad.  
+                </td>
+            </tr>
+            <tr>
+                <th>Certificación de libertad</th>
+                <td>Confirma que el inmueble se encuentra libre de cualquier gravamen o limitación que no esté debidamente
+                    registrado. 
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
+
+<div class="content" *ngIf="activeTab=='tramites'">
+    <div class="table">
+        <table>
+            <tr>
+                <th>Compraventa de bienes inmuebles
+                </th>
+                <td>Para verificar la situación jurídica del inmueble antes de formalizar la transacción.
+                </td>
+            </tr>
+            <tr>
+                <th>Trámites de hipotecas o préstamos hipotecarios
+                </th>
+                <td>Como parte del proceso de evaluación y aprobación de préstamos hipotecarios, para garantizar la libertad
+                    del inmueble y no afectar la garantía.
+                </td>
+            </tr>
+            <tr>
+                <th>Divorcios y disolución de sociedades conyugales
+                </th>
+                <td>Para la división de los bienes inmuebles entre las partes involucradas.
+                </td>
+            </tr>
+            <tr>
+                <th>Herencias y sucesiones
+                </th>
+                <td>Para demostrar la propiedad del difunto y facilitar la transferencia a los herederos.</td>
+            </tr>
+            <tr>
+                <th>Constitución de garantías reales
+                </th>
+                <td>En el caso una hipoteca, prenda o anticresis, se verifica la propiedad del mismo y establecer la validez
+                    de la garantía.
+    
+                </td>
+            </tr>
+            <tr>
+                <th>Constitución de garantías reales
+                </th>
+                <td>Como parte de los trámites relacionados con licencias de construcción, subdivisiones de predios u otros
+                    procesos de urbanismo.
+    
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</div>

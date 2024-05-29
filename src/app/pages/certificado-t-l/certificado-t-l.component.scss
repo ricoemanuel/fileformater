@@ -1,0 +1,55 @@
+@import "../../sass/abtracts/variables.scss";
+
+.title {
+    text-align: center;
+    color: $primary-blue;
+}
+
+.head {
+    background-color: rgb(226, 225, 225);
+    width: 70%;
+    padding: 25px;
+    border-radius: 25px;
+    position: relative;
+
+    h3 {
+        color: $mainColorBlue;
+    }
+
+    .controller {
+        text-align: center;
+        button {
+            background-color: transparent;
+            border-radius: 25px;
+            border: $mainColorBlue solid 1px;
+            width: 50%;
+        }
+    }
+}
+
+.centrar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.selected {
+    background-color: $mainColorBlue !important;
+    color: white;
+}
+
+.content {
+    background-color: $primary-blue;
+    margin-top: -95px; /* Ajusta el margen superior para que el contenido esté justo debajo de .head */
+    padding: 20px; /* Añade un poco de relleno para espaciar el contenido */
+}
+
+.table {
+    margin-top: 100px; 
+    color: white;
+    & th{
+        padding: 12px;
+        text-align: right;
+    }
+}
+

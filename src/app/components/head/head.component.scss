@@ -1,0 +1,15 @@
+@import "../../sass/abstracts/variables";
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; /* Espacio entre las tarjetas, puedes ajustarlo según tus necesidades */
+  }
+  
+  app-flip-card {
+    width: 100%; /* Asegúrate de que las tarjetas ocupen todo el espacio disponible en la celda de la rejilla */
+  }
+
+  
+  
+  

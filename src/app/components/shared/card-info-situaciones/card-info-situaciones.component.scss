@@ -1,0 +1,22 @@
+@import "../../../sass/abtracts/variables.scss";
+
+
+.card{
+    width: 500px;
+    height: 300px;
+    background-color: rgb(226, 225, 225);
+    padding: 25px;
+    border-radius: 25px;
+    & .head{
+       & .title{
+        text-align: center;
+        color: $primary-blue;
+       } 
+    }
+    & .content{
+        text-align: justify;
+       & .title{
+        color: $mainColorBlue;
+       } 
+    }
+}

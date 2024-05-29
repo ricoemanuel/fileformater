@@ -1,0 +1,16 @@
+@import "./sass/abtracts/variables.scss";
+
+mat-toolbar {
+    background-color: $primary-blue;
+    height: 100px;
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+}
+

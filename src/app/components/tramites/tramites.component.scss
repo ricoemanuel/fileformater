@@ -1,0 +1,15 @@
+@import "../../sass/abstracts/variables";
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Espacio entre las tarjetas, puedes ajustarlo según tus necesidades */
+  }
+  
+  app-card-tramite {
+    width: 100%; /* Asegúrate de que las tarjetas ocupen todo el espacio disponible en la celda de la rejilla */
+  }
+
+  
+  
+  
