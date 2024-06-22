@@ -14,7 +14,8 @@ configs:any[]=[
     },
     implications:{
       text:'El propietario conserva la titularidad del inmueble, pero el prestamista tiene un derecho prioritario sobre el mismo en caso de incumplimiento en el pago del préstamo. Esto afecta la venta o transferencia del inmueble sin cancelar la hipoteca. '
-    }
+    },
+    img:"../../../assets/banking.png"
   },
   {
     title:'Embargo',
@@ -24,6 +25,8 @@ configs:any[]=[
     implications:{
       text:'El inmueble queda sujeto a las medidas judiciales y puede ser vendido en una subasta pública para satisfacer la deuda. El propietario conserva la titularidad hasta que se complete el proceso de embargo.'
     }
+    ,
+    img:"../../../assets/document.png"
   },
   {
     title:'Limitaciones urbanísticas',
@@ -32,7 +35,8 @@ configs:any[]=[
     },
     implications:{
       text:'El propietario del inmueble está sujeto a cumplir con las regulaciones urbanísticas al realizar cualquier tipo de construcción o modificación en el mismo. El incumplimiento puede resultar en multas u otras sanciones'
-    }
+    },
+    img:"../../../assets/construction.png"
   },
   {
     title:'Prenda',
@@ -41,7 +45,8 @@ configs:any[]=[
     },
     implications:{
       text:'Al igual que con la hipoteca, la prenda otorga al acreedor un derecho prioritario sobre el bien prendado en caso de incumplimiento en el pago de la deuda.'
-    }
+    },
+    img:"../../../assets/protection.png"
   },
   {
     title:'Impuestos y gravámenes fiscales',
@@ -51,6 +56,8 @@ configs:any[]=[
     implications:{
       text:'El incumplimiento en el pago de impuestos puede resultar en la imposición de embargos fiscales sobre la propiedad.'
     }
+    ,
+    img:"../../../assets/tax.png"
   },
   {
     title:'Litigios pendientes',
@@ -60,6 +67,8 @@ configs:any[]=[
     implications:{
       text:'Los litigios pendientes pueden afectar la transferencia de propiedad.'
     }
+    ,
+    img:"../../../assets/legal-hammer.png"
   },
   
 ]

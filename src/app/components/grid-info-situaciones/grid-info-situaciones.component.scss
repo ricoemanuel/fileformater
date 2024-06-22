@@ -1,16 +1,31 @@
 @import "../../sass/abtracts/variables.scss";
 
 .card-container {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px; /* Espacio entre las tarjetas, puedes ajustarlo según tus necesidades */
+
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px; /* Espacio entre las tarjetas, puedes ajustarlo según tus necesidades */
   }
-  
-  app-flip-card {
-    width: 100%; /* Asegúrate de que las tarjetas ocupen todo el espacio disponible en la celda de la rejilla */
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
-  .centrar{
-    align-items: center;
-    justify-content: center;
-    display: flex;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 8px; /* Reducir el espacio entre las tarjetas en pantallas más pequeñas */
   }
+}
+
+app-flip-card {
+  width: 100%; /* Asegúrate de que las tarjetas ocupen todo el espacio disponible en la celda de la rejilla */
+}
+
+.centrar {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

@@ -1,0 +1,163 @@
+@import "../../sass/abtracts/variables.scss";
+
+.mat-mdc-text-field-wrapper {
+    background-color: white;
+    border-radius: 40px !important;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+
+
+    & .container {
+        z-index: 2;
+        margin-top: 16%;
+        align-items: center;
+        background-color: white;
+        border: $primary-blue solid 2px;
+        padding: 20px;
+        border-radius: 20px;
+        width: 325px;
+    }
+
+    .edit:hover {
+        cursor: pointer;
+    }
+
+    & .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+
+    & form {
+        min-width: 300px;
+
+        & mat-form-field {
+            width: 100%;
+        }
+    }
+
+    & button {
+        width: 130px;
+        font-size: 15px;
+        border-radius: 40px !important;
+    }
+
+    & .login {
+        background-color: white;
+        color: $primary-blue;
+        border: 2px solid $primary-blue;
+
+
+    }
+
+    & .sign-up {
+        background-color:$mainColorBlue;
+        color: white;
+        border:$mainColorBlue solid;
+    }
+
+    
+
+    & .imagenes {
+        position: relative;
+        top: 0;
+
+
+        & .superior {
+            position: fixed;
+            top: 0;
+        }
+
+
+
+        & .izquierda {
+            position: fixed;
+            left: 0;
+            width: 143px;
+        }
+
+        & .derecha {
+            position: fixed;
+            right: 0;
+            width: 200px;
+        }
+
+        & .inferior {
+            position: fixed;
+            bottom: -17px;
+            width: 124px;
+        }
+
+    }
+
+    @media (min-width: 768px) {
+
+        /* Estilos para tablet y dispositivos con pantallas más grandes */
+        & .imagenes {
+
+
+            & .izquierda {
+                left: -10px;
+                width: 276px;
+            }
+
+            & .derecha {
+                right: -17px;
+                width: 280px;
+            }
+
+
+        }
+
+        & button {
+            width: 200px;
+        }
+
+        & .container {
+            margin-top: 8%;
+            width: 540px;
+            margin-bottom: 5%;
+        }
+
+        & .logo {
+            margin: -89px 0px 22px;
+        }
+
+        & form {
+            width: 500px;
+        }
+
+    }
+}
+
+.forgot {
+    color: rgb(67, 67, 67);
+    cursor: pointer;
+}
+
+.passCom {
+    color: red;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #f0f0f0 !important;
+
+}
+
+::ng-deep .mat-mdc-select-panel {
+    background-color: #f0f0f0 !important;
+}
+
+::ng-deep .mat-mdc-option {
+    color: black !important;
+}
+
+mat-label {
+    color: black;
+}

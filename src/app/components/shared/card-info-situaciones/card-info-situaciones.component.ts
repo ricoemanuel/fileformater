@@ -14,6 +14,8 @@ export class CardInfoSituacionesComponent {
     implications:{
       text:''
     }
+    ,
+    img:""
 
     
   }

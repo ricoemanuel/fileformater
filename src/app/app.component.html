@@ -1,8 +1,21 @@
-<mat-toolbar>
-  <span class="spacer"></span>
-  <a mat-button routerLink="/orip">ORIP</a>
-  <a mat-button routerLink="/certificado-tradicion-libertad">Certificado de Tradición y Libertad</a>
-  <a mat-button routerLink="/situaciones-juridicas">Situaciones Jurídicas</a>
-  <a mat-button routerLink="/blog">Blog</a>
+<!-- Barra de navegación con menú hamburguesa en dispositivos móviles y tabletas -->
+<mat-toolbar color="primary">
+ 
+
+  <!-- Botón hamburguesa visible en dispositivos móviles y tabletas -->
+  <button mat-icon-button class="menu-button" aria-label="Toggle menu" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- Lista de enlaces de navegación -->
+  <div class="nav-links" [class.open]="isMenuOpen">
+    <a mat-button (click)="toggleMenu()" routerLink="/orip">ORIP</a>
+    <a mat-button (click)="toggleMenu()" routerLink="/certificado-tradicion-libertad">Certificado de Tradición y Libertad</a>
+    <a mat-button (click)="toggleMenu()" routerLink="/situaciones-juridicas">Situaciones Jurídicas</a>
+    <a mat-button (click)="toggleMenu()" routerLink="/blog">Blog</a>
+  </div>
 </mat-toolbar>
-<router-outlet></router-outlet>
+<div (click)="toggleMenu()">
+  <router-outlet ></router-outlet>
+</div>
+

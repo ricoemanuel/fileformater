@@ -1,7 +1,7 @@
 @import "./sass/abtracts/variables.scss";
 
 mat-toolbar {
-    background-color: $primary-blue;
+    background-color: $mainColorBlue;
     height: 100px;
 
     & a {
@@ -13,4 +13,49 @@ mat-toolbar {
         flex: 1 1 auto;
     }
 }
-
+/* Estilo para el título de la aplicación */
+.app-title {
+    flex: 1; /* Ocupa todo el espacio disponible */
+  }
+  
+  /* Estilo para el botón hamburguesa */
+  .menu-button {
+    display: none; /* Inicialmente oculto en pantallas grandes */
+  }
+  
+  /* Estilo para la lista de enlaces de navegación */
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Media Query para pantallas pequeñas (menos de 600px) */
+  @media screen and (max-width: 600px) {
+    a{
+        color: black!important;
+    }
+    /* Oculta la lista de enlaces de navegación */
+    .nav-links {
+      display: none;
+      flex-direction: column; /* Alinea verticalmente en dispositivos móviles */
+      position: absolute;
+      top: 64px; /* Ajusta según el tamaño de la barra de navegación */
+      left: 0;
+      background-color: #f9f9f9;
+      width: 100%;
+      padding: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* Asegura que esté sobre el contenido */
+    }
+  
+    /* Muestra el botón hamburguesa */
+    .menu-button {
+      display: block; /* Muestra el botón en dispositivos móviles */
+    }
+  
+    /* Clase para mostrar la lista de enlaces cuando el menú hamburguesa está activo */
+    .nav-links.open {
+      display: flex;
+    }
+  }
+  

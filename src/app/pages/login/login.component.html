@@ -1,0 +1,45 @@
+<div class="login-container">
+    <div class="center">
+      <div class="container">
+        <div class="center">
+          <form [formGroup]="loginForm" *ngIf="!showRegistrationForm">
+            <mat-form-field>
+              <mat-label>Correo Electrónico</mat-label>
+              <input matInput type="email" formControlName="email" placeholder="Correo Electrónico">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <mat-label>Contraseña</mat-label>
+              <input matInput type="{{ passwordHidden ? 'password' : 'text' }}" formControlName="password"
+                placeholder="Contraseña">
+              <button mat-icon-button matSuffix (click)="togglePasswordVisibility()">
+                <mat-icon>{{ passwordHidden ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+            </mat-form-field>
+  
+            <br>
+  
+          </form>
+  
+        </div>
+        <div class="center">
+          <div class="row">
+
+            <br>
+            <div class="col">
+              <div class="center">
+                <button class="sign-up" (click)="onSubmit()">{{showRegistrationForm ? 'Registrarse' :
+                  'Iniciar sesión'}}</button>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <br><br>
+        <div class="center" *ngIf="!showRegistrationForm">
+          <h5 class="forgot" (click)="recuperar()">¿Olvidaste tu contraseña?</h5>
+        </div>
+  
+      </div>
+    </div>
+  </div>

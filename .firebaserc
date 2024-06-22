@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mega-informativo": {
+      "hosting": {
+        "registro-inmuebles": [
+          "mega-informativo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mega-informativo"
+  }
+}
