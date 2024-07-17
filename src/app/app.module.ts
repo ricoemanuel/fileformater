@@ -37,6 +37,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { MatSelectModule } from '@angular/material/select';
 import { LoginComponent } from './pages/login/login.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { LoginComponent } from './pages/login/login.component';
     PostFormComponent,
     PostComponent,
     LoginComponent,
+    FooterComponent,
     
   ],
   imports: [

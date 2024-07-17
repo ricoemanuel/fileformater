@@ -1,4 +1,3 @@
-
 <div class="container">
     <div class="title text-center">
         <h2>Comprar certificado de Tradición y Libertad</h2>
@@ -6,29 +5,32 @@
     <div class="row justify-content-center">
         <div class="col-md-8 form">
             <h4 class="text-center">Ingresa los siguientes datos para descargar tu Certificado de Tradición y Libertad en línea</h4>
+            <br>
             <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col">
-                        <mat-form-field class="custom-color">
-                            <mat-label>Correo Electrónico</mat-label>
-                            <input matInput type="text" formControlName="correoElectronico">
-                        </mat-form-field>
+                        <div class="form-group">
+                            <label for="correoElectronico">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correoElectronico" formControlName="correoElectronico" placeholder="Ingresa tu correo electrónico">
+                        </div>
                     </div>
                     <div class="col">
-                        <mat-form-field class="custom-color">
-                            <mat-label>Tipo de documento</mat-label>
-                            <mat-select formControlName="tipoDocumento">
-                                <mat-option *ngFor="let tipo of tiposDocumento" [value]="tipo">{{ tipo }}</mat-option>
-                            </mat-select>
-                        </mat-form-field>
+                        <div class="form-group">
+                            <label for="tipoDocumento">Tipo de documento</label>
+                            <select class="form-control" id="tipoDocumento" formControlName="tipoDocumento">
+                                <option value="none">Selecciona el tipo</option>
+                                <option *ngFor="let tipo of tiposDocumento" [value]="tipo">{{ tipo }}</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col">
-                        <mat-form-field class="custom-color">
-                            <mat-label>Número de documento</mat-label>
-                            <input matInput type="text" formControlName="numeroDocumento">
-                        </mat-form-field>
+                        <div class="form-group">
+                            <label for="numeroDocumento">Número de documento</label>
+                            <input type="text" class="form-control" id="numeroDocumento" formControlName="numeroDocumento" placeholder="Ingresa tu número de documento">
+                        </div>
                     </div>
-                    <div class="col-md-12 text-center">
+                  
+                    <div style="margin-top: 20px;" class="col-md-12 text-center">
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </div>
                 </div>
@@ -51,69 +53,113 @@
         </div>
     </div>
 
-    <div class=" row justify-content-center">
+    <div class="row justify-content-center">
         <div class="col-md-10 content" *ngIf="activeTab=='Elementos'">
             <div class="row contentTable">
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Identificación del bien inmueble</h4>
+                    <br>
+                    </div>
+                    <img src="../../../assets/casa-tramite.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Incluyen datos como la dirección, la matrícula inmobiliaria y la descripción del inmueble.</p>
-                    <img src="../../../assets/casa-tramite.jpg" alt="" class="img-fluid rounded">
                 </div>
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Titularidad</h4>
-                    <img src="../../../assets/contrato.jpeg" alt="" class="img-fluid rounded">
+                    <br>
+                    </div>
+                    <img src="../../../assets/contrato.jpeg" alt="" class="img-item">
+                    <br>
                     <p class="text">Quién es el actual propietario del bien inmueble y cómo se adquirió la propiedad, ya sea por compraventa, herencia, donación u otro medio.</p>
                 </div>
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Historia registral</h4>
+                    <br>
+                    </div>
+                    <img src="../../../assets/docuemnto.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Detalla los actos o contratos que han sido registrados sobre el inmueble a lo largo del tiempo, como compraventas, hipotecas, servidumbres, entre otros.</p>
-                    <img src="../../../assets/docuemnto.jpg" alt="" class="img-fluid rounded">
                 </div>
-                <div class="col-md-4 mb-4 text-center">
+                <div class="col-md-2 offset-md-2 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Limitaciones y gravámenes</h4>
-                    <img src="../../../assets/gravamen.jpg" alt="" class="img-fluid rounded">
+                    <br>
+                    </div>
+                    <img src="../../../assets/gravamen.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Como hipotecas, embargos, restricciones urbanísticas u otros derechos que puedan afectar la propiedad.</p>
                 </div>
-                <div class="col-md-4 mb-4 text-center">
+                <div class="col-md-2 offset-md-2 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Certificación de libertad</h4>
+                    <br>
+                    </div>
+                    <img src="../../../assets/inmuebles.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Confirma que el inmueble se encuentra libre de cualquier gravamen o limitación que no esté debidamente registrado.</p>
-                    <img src="../../../assets/inmuebles.jpg" alt="" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class=" row justify-content-center">
+    <div class="row justify-content-center">
         <div class="col-md-10 content" *ngIf="activeTab=='tramites'">
             <div class="row contentTable">
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Compraventa de bienes inmuebles</h4>
+                    <br>
+                    </div>
+                    <img src="../../../assets/casa-tramite.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Para verificar la situación jurídica del inmueble antes de formalizar la transacción.</p>
-                    <img src="../../../assets/casa-tramite.jpg" alt="" class="img-fluid rounded">
                 </div>
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Trámites de hipotecas o préstamos hipotecarios</h4>
-                    <img src="../../../assets/contrato.jpeg" alt="" class="img-fluid rounded">
+                    <br>
+                    </div>
+                    <img src="../../../assets/contrato.jpeg" alt="" class="img-item">
+                    <br>
                     <p class="text">Como parte del proceso de evaluación y aprobación de préstamos hipotecarios, para garantizar la libertad del inmueble y no afectar la garantía.</p>
                 </div>
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Divorcios y disolución de sociedades conyugales</h4>
+                    <br>
+                    </div>
+                    <img src="../../../assets/docuemnto.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Para la división de los bienes inmuebles entre las partes involucradas.</p>
-                    <img src="../../../assets/docuemnto.jpg" alt="" class="img-fluid rounded">
                 </div>
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Herencias y sucesiones</h4>
-                    <img src="../../../assets/gravamen.jpg" alt="" class="img-fluid rounded">
+                    <br>
+                    </div>
+                    <img src="../../../assets/gravamen.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Para demostrar la propiedad del difunto y facilitar la transferencia a los herederos.</p>
                 </div>
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Constitución de garantías reales</h4>
+                    <br>
+                    </div>
+                    <img src="../../../assets/inmuebles.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">En el caso una hipoteca, prenda o anticresis, se verifica la propiedad del mismo y establecer la validez de la garantía.</p>
-                    <img src="../../../assets/inmuebles.jpg" alt="" class="img-fluid rounded">
                 </div>
                 <div class="col-md-4 mb-4 text-center">
+                    <div class="titulo-card">
                     <h4>Constitución de garantías reales</h4>
-                    <img src="../../../assets/tradicion.jpg" alt="" class="img-fluid rounded">
+                    <br>
+                    </div>
+                    <img src="../../../assets/tradicion.jpg" alt="" class="img-item">
+                    <br>
                     <p class="text">Como parte de los trámites relacionados con licencias de construcción, subdivisiones de predios u otros procesos de urbanismo.</p>
                 </div>
             </div>

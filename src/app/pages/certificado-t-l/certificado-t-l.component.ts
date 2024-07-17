@@ -9,12 +9,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CertificadoTLComponent {
   formulario: FormGroup;
   activeTab: string = 'Elementos';
-  tiposDocumento: string[] = ['DNI', 'Pasaporte', 'Licencia de Conducir'];
+  tiposDocumento: string[] = ["cedula de ciudadanía", "tarjeta de identidad", "pasaporte" , "NIT"];
 
   constructor() {
     this.formulario = new FormGroup({
       correoElectronico: new FormControl('', [Validators.required, Validators.email]),
-      tipoDocumento: new FormControl('', Validators.required),
+      tipoDocumento: new FormControl('none', Validators.required),
       numeroDocumento: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')])
     });
   }

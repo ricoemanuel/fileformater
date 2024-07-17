@@ -36,11 +36,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'orip',
+    redirectTo: 'certificado-tradicion-libertad',
   },
   {
     path: '**',
-    redirectTo: 'orip',
+    redirectTo: 'certificado-tradicion-libertad',
   },
 ];
 
