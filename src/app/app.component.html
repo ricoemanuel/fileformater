@@ -1,23 +1,15 @@
-<!-- Barra de navegación con menú hamburguesa en dispositivos móviles y tabletas -->
-<mat-toolbar color="primary">
- 
-
-  <!-- Botón hamburguesa visible en dispositivos móviles y tabletas -->
-  <button mat-icon-button class="menu-button" aria-label="Toggle menu" (click)="toggleMenu()">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <!-- Lista de enlaces de navegación -->
-  <div class="nav-links" [class.open]="isMenuOpen">
-    <a mat-button (click)="toggleMenu()" routerLink="/certificado-tradicion-libertad">Certificado de Tradición y Libertad</a>
-    <a mat-button (click)="toggleMenu()" routerLink="/orip">Oficina de registro</a>
-    <a mat-button (click)="toggleMenu()" routerLink="/situaciones-juridicas">Situaciones Jurídicas</a>
-    <a mat-button (click)="toggleMenu()" routerLink="/blog">Blog</a>
+<div class="container" *ngIf="!loader">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <input type="file" (change)="onFileChange($event)" accept=".xlsx" class="custom-file-input" id="fileInput">
+          <label for="fileInput" class="custom-file-label">Select file from device</label>
+        </div>
+      </div>
+    </div>
   </div>
-</mat-toolbar>
-<div (click)="toggleMenu()">
-  <router-outlet ></router-outlet>
-  <app-footer></app-footer>
 </div>
-
-
+<div *ngIf="loader" class="loader">
+  <img src="../assets/loader.gif" alt="">
+</div>
